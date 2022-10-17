@@ -12,8 +12,7 @@ afterReboot();
 player.on(
   `timeupdate`,
   throttle(function ({ seconds }) {
-    const timeupdate = JSON.stringify(seconds);
-    localStorage.setItem(KEY, timeupdate);
+    localStorage.setItem(KEY, seconds);
   }, 1000)
 );
 
